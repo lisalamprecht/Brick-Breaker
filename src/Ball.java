@@ -1,7 +1,4 @@
 import java.awt.Color;
-import java.awt.color.*;
-import java.awt.*;
-import javax.swing.*;
 
 public class Ball {
     //Global Variables
@@ -12,10 +9,8 @@ public class Ball {
     private Color ballColor = Color.MAGENTA;
     private GamePanel gamePanel;
     
-
     //Create ball constructor
-    Ball() {
-        
+    Ball() {  
     }
 
     //create ball constructor based off parameters
@@ -76,5 +71,4 @@ public class Ball {
     public void setGamePanel(GamePanel gPanel) {
         this.gamePanel = gPanel;
     }
-    
 }

@@ -1,7 +1,3 @@
-import javax.swing.AbstractAction;
-
-import java.awt.event.*;
-
 public class Paddle {
     //Global Variables
     private int paddleWidth;
@@ -12,7 +8,6 @@ public class Paddle {
     
     //create paddle constructor
     Paddle() {
-
     }
 
     //create a paddle constructor based off parameters
@@ -23,7 +18,6 @@ public class Paddle {
         this.setPaddleX(pX);
         this.setPaddleY(pY);
         this.setGamePanel(gPanel);
-
     }
 
     //create get and set methods for all paddle attributes
@@ -59,7 +53,6 @@ public class Paddle {
         this.paddleY = pY;
     }
 
-    
     public GamePanel getGamePanel() {
         return gamePanel;
     }
@@ -78,39 +71,24 @@ public class Paddle {
             } 
             else if (getPaddleX() > 0) {
                 setPaddleX(getPaddleX()-10); //to move paddle left -10
-          //      gamePanel.repaint(getPaddleX()+10, getPaddleY(), getPaddleWidth(), getPaddleHeight()); //repaint old position
-          //      gamePanel.repaint(getPaddleX(), getPaddleY(), getPaddleWidth(), getPaddleHeight()); //repaint new position
-                System.out.println("left, x: " + getPaddleX());
-              
+                System.out.println("left, x: " + getPaddleX());            
             }
-
-            gamePanel.repaint();
-            
-            
+            gamePanel.repaint();           
         }
-        catch (Exception e) {
-            
-         }
-        
-
+        catch (Exception e) {           
+        }
     }
 
-    
-
     //move the paddle right if it is not already positioned to the far right of the panel
-    public void moveRight() {
-        
+    public void moveRight() {    
         if(getPaddleX() >= gamePanel.getWidth() - getPaddleWidth()) { //dont move the paddle if it is on the right edge of the panel
             setPaddleX(gamePanel.getWidth() - getPaddleWidth());
-            System.out.println("right1, x:" + getPaddleX());
-            
+            System.out.println("right1, x:" + getPaddleX());       
         }
         else if ((getPaddleX()+getPaddleWidth()) <= gamePanel.getWidth()){ //if the paddle is within the panel bounds
             setPaddleX(getPaddleX() + 10); //to move paddle right +10
             System.out.println("right, x:" + getPaddleX());
         }
-
-        gamePanel.repaint();
-        
+        gamePanel.repaint();    
     }
 }

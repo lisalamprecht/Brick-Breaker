@@ -1,13 +1,8 @@
 import java.awt.Color;
-import java.util.*;
-
-import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.*;
-
-
 import java.awt.event.*;
 
 public class GameOverPanel extends JPanel {
@@ -31,8 +26,7 @@ public class GameOverPanel extends JPanel {
         
         JLabel gameOverLabel = new JLabel("Game Over!", SwingConstants.CENTER); //swings centers the text
         JLabel label = new JLabel("Home (esc); Play Again (space)", SwingConstants.CENTER);
-        this.setLayout(new GridLayout(0,1));
-        
+        this.setLayout(new GridLayout(0,1)); 
         
         gameOverLabel.setFont(new Font("Verdana", Font.PLAIN, 40));
         gameOverLabel.setForeground(Color.RED); //changes text color
@@ -59,9 +53,7 @@ public class GameOverPanel extends JPanel {
             JPanel parent = (JPanel)getParent();
             CardLayout layout = (CardLayout)parent.getLayout();
             layout.show(parent, "Home"); //changes the panel shown to the one called "Game Panel"
-        });
-       
-        
+        });   
     }
 
      // paint all the elements in

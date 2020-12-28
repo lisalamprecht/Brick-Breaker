@@ -1,16 +1,8 @@
 import java.awt.Color;
 import java.awt.event.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-
-import javax.swing.AbstractAction;
-import javax.swing.ActionMap;
-import javax.swing.InputMap;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
-import javax.swing.KeyStroke;
 import javax.swing.Timer;
-import java.util.*;
 import java.awt.*;
 
 /**
@@ -18,15 +10,11 @@ import java.awt.*;
  */
 
 public class GamePanel extends JPanel implements ActionListener {
-
     // Global Variables
     private Ball ball;
     private Paddle paddle;
-   // private Bricks bricks;
-    private GameFrame gameFrame;
     private int width;
     private int height; 
-    private Timer timer;
     private int brickHeight = 30;
     private int brickWidth = 60;
     ArrayList<Bricks> brickArray = new ArrayList<Bricks>();
@@ -53,9 +41,6 @@ public class GamePanel extends JPanel implements ActionListener {
         paddle = new Paddle(this, 50, 700, 100, 10); //creates paddle object
         initialiseBrickArray();
         kBindings = new KeyBindings();
-        
-        //Set up timer to drive animation events.
-        timer = new Timer(delay, this);
 
         //initialise key bindings for space, left and right
         kBindings.addKeyBinding(this, KeyEvent.VK_SPACE, "startBall", (evt) -> {
@@ -154,22 +139,6 @@ public class GamePanel extends JPanel implements ActionListener {
         }
         leftOverSpace = this.getWidth() - width;
     }
-
-    //maps the input and then the action. Uses action listener to decide what action is performed 
-   /* public void addKeyBinding(JComponent comp, int keyCode, String id, ActionListener actionListener) {
-                InputMap im = comp.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
-                ActionMap ap = comp.getActionMap();
-
-                im.put(KeyStroke.getKeyStroke(keyCode, 0, false), id);
-                ap.put(id, new AbstractAction() {
-        
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        actionListener.actionPerformed(e);
-                    }
-                });
-    }*/
-
     
     // paint all the elements in
     public void paintComponent(Graphics g) {
@@ -216,8 +185,5 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-
     }
-
-    
 }

@@ -1,8 +1,5 @@
 import java.awt.CardLayout;
-import javax.swing.InputMap;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
-
 
 public class BrickBreakerGameApp {
 

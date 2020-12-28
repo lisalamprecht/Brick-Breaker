@@ -14,8 +14,6 @@ public class Bricks {
         this.setVisible(visible);
     }
 
-    
-
     // create get and set methods for attributes
     public int getBrickX() {
         return brickX;
@@ -56,5 +54,4 @@ public class Bricks {
     public boolean getVisible() {
         return visible;
     }
-
 }

@@ -1,16 +1,10 @@
 import java.awt.Color;
-import java.util.*;
-
-import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
-
 import java.awt.*;
-
-
 import java.awt.event.*;
 
 public class Home extends JPanel{
@@ -35,7 +29,6 @@ public class Home extends JPanel{
         JLabel brickBreakerLabel = new JLabel("Brick Breaker!", SwingConstants.CENTER); //swings centers the text
         JLabel label = new JLabel("Play (space); Exit Game (esc)", SwingConstants.CENTER);
         this.setLayout(new GridLayout(0,1));
-        
         
         brickBreakerLabel.setFont(new Font("Verdana", Font.BOLD, 40));
         brickBreakerLabel.setForeground(Color.ORANGE); //changes text color
